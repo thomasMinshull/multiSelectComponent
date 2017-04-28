@@ -1,0 +1,6 @@
+framework module Gizou {
+  umbrella header "Gizou-umbrella.h"
+
+  export *
+  module * { export * }
+}

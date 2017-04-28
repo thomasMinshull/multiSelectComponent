@@ -1,0 +1,33 @@
+PODS:
+  - Foundry (0.1.1):
+    - Gizou
+  - Gizou (0.1.3)
+  - Nimble (6.0.1)
+  - OCMock (3.2.2)
+  - Quick (1.1.0)
+
+DEPENDENCIES:
+  - Foundry (from `https://github.com/hirad/Foundry`)
+  - Nimble (~> 6.0.1)
+  - OCMock (= 3.2.2)
+  - Quick (~> 1.1.0)
+
+EXTERNAL SOURCES:
+  Foundry:
+    :git: https://github.com/hirad/Foundry
+
+CHECKOUT OPTIONS:
+  Foundry:
+    :commit: f3d079d13e996dbd7246231f00a4114443605515
+    :git: https://github.com/hirad/Foundry
+
+SPEC CHECKSUMS:
+  Foundry: 9e5cde3ab54e9fc777c5fee9bf5ac1af760aff06
+  Gizou: 93853bf634a9382c257795db052aa9a75e972c43
+  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  OCMock: 18c9b7e67d4c2770e95bb77a9cc1ae0c91fe3835
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+
+PODFILE CHECKSUM: 2383092e9dad432983ceae6eb7aed6756e7280c8
+
+COCOAPODS: 1.1.1

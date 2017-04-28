@@ -1,0 +1,6 @@
+framework module Foundry {
+  umbrella header "Foundry-umbrella.h"
+
+  export *
+  module * { export * }
+}
