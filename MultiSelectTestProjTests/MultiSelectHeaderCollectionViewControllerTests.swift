@@ -14,8 +14,8 @@ import Nimble
 class MultiSelectHeaderCollectionViewControllerTests: QuickSpec {
     override func spec() {
         var subject: MultiSelectHeaderCollectionViewController!
-        var items: Array<MultiSelectItemProtocol> = [MultiSelectItemProtocol]()
-        let item1 = MultiSelectItemProtocolDup(text:"Item1", detailText:"This is a dup for testing")
+        var items = [MultiSelectItem]()
+        let item1 = MultiSelectItem(multiSelectText:"Item1", multiSelectDetailText:"This is a dup for testing")
         
         beforeEach {
             subject = MultiSelectHeaderCollectionViewController()
@@ -29,7 +29,7 @@ class MultiSelectHeaderCollectionViewControllerTests: QuickSpec {
         
         it("should return the correct selected Items after setup") {
             subject.setupWithSelectedItems(selectedItems: items)
-            expect(subject?.selectedItems as? [MultiSelectItemProtocolDup]).to(contain(item1))
+            expect(subject?.selectedItems).to(contain(item1))
         }
         
     }

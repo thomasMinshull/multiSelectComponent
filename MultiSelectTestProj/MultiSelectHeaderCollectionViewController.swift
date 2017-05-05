@@ -8,17 +8,22 @@
 
 import UIKit
 
-protocol MultiSelectItemProtocol: Equatable {
+protocol MultiSelectItemProtocol {
     var multiSelectText: String { get }
     var multiSelectDetailText: String { get }
 
-    // Because conforming to equitable makes it a "PAT" and breaks everthing 
-    // Could possibly use a type erasure but really Swift WTF
-    // https://www.youtube.com/watch?v=XWoNjiSPqI8&feature=youtu.be
-    // Thanks Apple 
-    func equalTo(multiSelectItem: MultiSelectItemProtocol) -> Bool
-
  }
+
+struct  MultiSelectItem: MultiSelectItemProtocol, Equatable {
+    var multiSelectText: String
+    var multiSelectDetailText: String
+    
+    static func ==(lhs: MultiSelectItem, rhs: MultiSelectItem) -> Bool {
+        return lhs.multiSelectText == rhs.multiSelectText && lhs.multiSelectDetailText == rhs.multiSelectDetailText
+    }
+}
+
+
 
 class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     
@@ -45,11 +50,11 @@ class MultiSelectHeaderCollectionViewController: UICollectionViewController {
         super.init(coder: coder)
     }
     
-    var selectedItems: [MultiSelectItemProtocol]! {
+    var selectedItems: [MultiSelectItem]! {
         return ds.selectedItems
     }
     
-    func setupWithSelectedItems(selectedItems: [MultiSelectItemProtocol]) {
+    func setupWithSelectedItems(selectedItems: [MultiSelectItem]) {
         ds.setupWithSelectedItems(selectedItems: selectedItems)
         collectionView?.reloadData() 
     }

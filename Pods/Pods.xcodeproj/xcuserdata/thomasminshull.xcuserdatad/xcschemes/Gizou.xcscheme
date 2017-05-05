@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D8D985E3757702E26740DB650C016947'
+               BlueprintIdentifier = '70D6BD501DB091D754123012E9A5065D'
                BlueprintName = 'Gizou'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Gizou.framework'>

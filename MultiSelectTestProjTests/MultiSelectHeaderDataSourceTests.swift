@@ -14,9 +14,9 @@ import Nimble
 class MultiSelectHeaderDataSourceTests: QuickSpec {
     override func spec() {
         var subject: MultiSelectHeaderDataSource!
-        var items: Array<MultiSelectItemProtocol> = [MultiSelectItemProtocol]()
-        let item1 = MultiSelectItemProtocolDup(text: "Item1", detailText: "This is a dup for testing")
-        let item2 = MultiSelectItemProtocolDup(text: "Item2", detailText: "This is a dup for testing")
+        var items = [MultiSelectItem]()
+        let item1 = MultiSelectItem(multiSelectText: "Item1", multiSelectDetailText: "This is a dup for testing")
+        let item2 = MultiSelectItem(multiSelectText: "Item2", multiSelectDetailText: "This is a dup for testing")
         
         beforeEach {
             subject = MultiSelectHeaderDataSource()
@@ -29,14 +29,14 @@ class MultiSelectHeaderDataSourceTests: QuickSpec {
         
         it("should return the correct selected Items after setup") {
             subject.setupWithSelectedItems(selectedItems: items)
-            expect(subject?.selectedItems as? [MultiSelectItemProtocolDup]).to(contain(item1, item2))
+            expect(subject?.selectedItems).to(contain(item1, item2))
         }
         
-        it("should remove deselected item for selectedItems list") {
-            subject.setupWithSelectedItems(selectedItems: items)
-            subject.remove(item: item1)
-            
-        }
+//        it("should remove deselected item for selectedItems list") {
+//            subject.setupWithSelectedItems(selectedItems: items)
+//            subject.remove(item: item1)
+//            
+//        }
     }
 }
 

@@ -11,15 +11,15 @@ import UIKit
 class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
 
     let reuseIdentifier = "Cell"
-    private (set) var selectedItems = [MultiSelectItemProtocol]()
+    private (set) var selectedItems = [MultiSelectItem]()
     
     // MARK: MultiSelectHeaderDataSource Public Interface 
     
-    func setupWithSelectedItems(selectedItems: [MultiSelectItemProtocol]) {
+    func setupWithSelectedItems(selectedItems: [MultiSelectItem]) {
         self.selectedItems = selectedItems
     }
     
-    func deSelect(multiSelectItem item: MultiSelectItemProtocol) {
+    func deSelect(multiSelectItem item: MultiSelectItem) {
         let index = selectedItems.index(of: item)
         
         
