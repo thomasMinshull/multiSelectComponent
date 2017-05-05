@@ -15,8 +15,72 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "selectedItems"
-            landmarkType = "24">
+            landmarkName = "setupWithSelectedItems(selectedItems:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MultiSelectTestProj/MultiSelectItem.swift"
+            timestampString = "515703030.558224"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "==(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiSelectTestProj.AnyMultiSelectItem.__deallocating_deinit"
+                  moduleName = "MultiSelectTestProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasminshull/Dev/DrBill/MultiSelectTestProj/MultiSelectTestProj/MultiSelectItem.swift"
+                  timestampString = "515703419.542957"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiSelectTestProj.AnyMultiSelectItem.deinit"
+                  moduleName = "MultiSelectTestProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasminshull/Dev/DrBill/MultiSelectTestProj/MultiSelectTestProj/MultiSelectItem.swift"
+                  timestampString = "515703419.547464"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "11">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MultiSelectTestProj/MultiSelectItem.swift"
+            timestampString = "515703031.876934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "==(_:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

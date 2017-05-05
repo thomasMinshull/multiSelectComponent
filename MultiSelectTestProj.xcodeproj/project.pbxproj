@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		04F1636AB134F74153715912 /* Pods_MultiSelectTestProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFD95B1B872231A52419571 /* Pods_MultiSelectTestProjTests.framework */; };
 		55007CA61EB1648F00E9094A /* MultiSelectHeaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55007CA51EB1648F00E9094A /* MultiSelectHeaderDataSource.swift */; };
-		55007CA81EB27DCE00E9094A /* MultiSelectItemProtocolDup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55007CA71EB27DCE00E9094A /* MultiSelectItemProtocolDup.swift */; };
+		55007CA81EB27DCE00E9094A /* MultiSelectItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55007CA71EB27DCE00E9094A /* MultiSelectItemTests.swift */; };
 		55007CAA1EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55007CA91EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift */; };
 		55152F101EB14AC6008DC2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F0F1EB14AC6008DC2EB /* AppDelegate.swift */; };
 		55152F171EB14AC6008DC2EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55152F161EB14AC6008DC2EB /* Assets.xcassets */; };
@@ -19,6 +19,7 @@
 		55152F341EB14AF8008DC2EB /* MultiSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F301EB14AF8008DC2EB /* MultiSelectViewController.swift */; };
 		55152F351EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */; };
 		55152F361EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */; };
+		552664E41EBBA8EB00158019 /* MultiSelectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552664E31EBBA8EB00158019 /* MultiSelectItem.swift */; };
 		C36628A38E2085E2D7236E85 /* Pods_MultiSelectTestProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2B129B2DA00755C4F257DA /* Pods_MultiSelectTestProj.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,7 @@
 		1AFD95B1B872231A52419571 /* Pods_MultiSelectTestProjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiSelectTestProjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB6D27786F127FE20E5D02D /* Pods-MultiSelectTestProjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiSelectTestProjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MultiSelectTestProjTests/Pods-MultiSelectTestProjTests.release.xcconfig"; sourceTree = "<group>"; };
 		55007CA51EB1648F00E9094A /* MultiSelectHeaderDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectHeaderDataSource.swift; sourceTree = "<group>"; };
-		55007CA71EB27DCE00E9094A /* MultiSelectItemProtocolDup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectItemProtocolDup.swift; sourceTree = "<group>"; };
+		55007CA71EB27DCE00E9094A /* MultiSelectItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectItemTests.swift; sourceTree = "<group>"; };
 		55007CA91EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectHeaderDataSourceTests.swift; sourceTree = "<group>"; };
 		55152F0C1EB14AC6008DC2EB /* MultiSelectTestProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiSelectTestProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55152F0F1EB14AC6008DC2EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		55152F301EB14AF8008DC2EB /* MultiSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectViewController.swift; sourceTree = "<group>"; };
 		55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectHeaderCollectionViewController.swift; sourceTree = "<group>"; };
+		552664E31EBBA8EB00158019 /* MultiSelectItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectItem.swift; sourceTree = "<group>"; };
 		9C2B129B2DA00755C4F257DA /* Pods_MultiSelectTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiSelectTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD579C8F9AB3784FAFBC64BB /* Pods-MultiSelectTestProjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiSelectTestProjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultiSelectTestProjTests/Pods-MultiSelectTestProjTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D39BCCAC77A33A477CF9B348 /* Pods-MultiSelectTestProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiSelectTestProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultiSelectTestProj/Pods-MultiSelectTestProj.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */,
 				55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */,
 				55007CA51EB1648F00E9094A /* MultiSelectHeaderDataSource.swift */,
+				552664E31EBBA8EB00158019 /* MultiSelectItem.swift */,
 				55152F161EB14AC6008DC2EB /* Assets.xcassets */,
 				55152F181EB14AC6008DC2EB /* LaunchScreen.storyboard */,
 				55152F1B1EB14AC6008DC2EB /* Info.plist */,
@@ -128,7 +131,7 @@
 			children = (
 				55152F241EB14AC6008DC2EB /* MultiSelectHeaderCollectionViewControllerTests.swift */,
 				55007CA91EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift */,
-				55007CA71EB27DCE00E9094A /* MultiSelectItemProtocolDup.swift */,
+				55007CA71EB27DCE00E9094A /* MultiSelectItemTests.swift */,
 				55152F261EB14AC6008DC2EB /* Info.plist */,
 			);
 			path = MultiSelectTestProjTests;
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552664E41EBBA8EB00158019 /* MultiSelectItem.swift in Sources */,
 				55007CA61EB1648F00E9094A /* MultiSelectHeaderDataSource.swift in Sources */,
 				55152F351EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift in Sources */,
 				55152F341EB14AF8008DC2EB /* MultiSelectViewController.swift in Sources */,
@@ -359,7 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55007CA81EB27DCE00E9094A /* MultiSelectItemProtocolDup.swift in Sources */,
+				55007CA81EB27DCE00E9094A /* MultiSelectItemTests.swift in Sources */,
 				55007CAA1EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift in Sources */,
 				55152F251EB14AC6008DC2EB /* MultiSelectHeaderCollectionViewControllerTests.swift in Sources */,
 			);

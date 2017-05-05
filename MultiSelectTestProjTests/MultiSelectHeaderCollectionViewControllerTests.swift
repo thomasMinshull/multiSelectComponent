@@ -14,12 +14,13 @@ import Nimble
 class MultiSelectHeaderCollectionViewControllerTests: QuickSpec {
     override func spec() {
         var subject: MultiSelectHeaderCollectionViewController!
-        var items: Array<MultiSelectItemProtocol> = [MultiSelectItemProtocol]()
-        let item1 = MultiSelectItemProtocolDup(text:"Item1", detailText:"This is a dup for testing")
+        var items = [AnyMultiSelectItem<MultiSelectItemHeaderTypeAlias>]()
+        let item1 = MultiSelectItem(text:"Item1", detailText:"This is a dup for testing")
+        let wrappedItem1 = AnyMultiSelectItem<MultiSelectItem>(item1)
         
         beforeEach {
             subject = MultiSelectHeaderCollectionViewController()
-            items = [item1]
+            items = [wrappedItem1]
             
         }
         
@@ -29,7 +30,7 @@ class MultiSelectHeaderCollectionViewControllerTests: QuickSpec {
         
         it("should return the correct selected Items after setup") {
             subject.setupWithSelectedItems(selectedItems: items)
-            expect(subject?.selectedItems as? [MultiSelectItemProtocolDup]).to(contain(item1))
+            expect(subject.selectedItems).to(contain(wrappedItem1))
         }
         
     }

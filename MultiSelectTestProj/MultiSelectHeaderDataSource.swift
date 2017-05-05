@@ -8,24 +8,26 @@
 
 import UIKit
 
-class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
 
+typealias MultiSelectItemHeaderTypeAlias = MultiSelectItem // TODO can I make this dynamic so I could change it, Should this be in the MultiSelectItem.swift file??
+
+class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
     let reuseIdentifier = "Cell"
-    private (set) var selectedItems = [MultiSelectItemProtocol]()
+ //need to resolve type issue
+    private (set) var selectedItems = [AnyMultiSelectItem<MultiSelectItemHeaderTypeAlias>]()
     
-    // MARK: MultiSelectHeaderDataSource Public Interface 
+    // MARK: MultiSelectHeaderDataSource Public Interface
     
-    func setupWithSelectedItems(selectedItems: [MultiSelectItemProtocol]) {
+    func setupWithSelectedItems(selectedItems: [AnyMultiSelectItem<MultiSelectItemHeaderTypeAlias>]) {
         self.selectedItems = selectedItems
     }
     
-    func deSelect(multiSelectItem item: MultiSelectItemProtocol) {
+    func deSelect(multiSelectItem item: AnyMultiSelectItem<MultiSelectItemHeaderTypeAlias>) {
         let index = selectedItems.index(of: item)
         
         
     }
-    
-    
+
     
     // MARK: UICollectionViewDataSource
     
