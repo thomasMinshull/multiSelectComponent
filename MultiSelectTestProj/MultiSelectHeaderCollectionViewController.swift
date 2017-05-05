@@ -23,8 +23,6 @@ struct  MultiSelectItem: MultiSelectItemProtocol, Equatable {
     }
 }
 
-
-
 class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     
     private let ds = MultiSelectHeaderDataSource()

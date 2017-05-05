@@ -19,13 +19,16 @@ class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
         self.selectedItems = selectedItems
     }
     
-    func deSelect(multiSelectItem item: MultiSelectItem) {
-        let index = selectedItems.index(of: item)
-        
-        
+    func remove(item: MultiSelectItem) {
+        if let index = selectedItems.index(of: item) {
+            selectedItems.remove(at: index)
+        }
     }
     
-    
+    func selectItem(selectedItem: MultiSelectItem) {
+        guard !(selectedItems.contains(selectedItem)) else { return }
+        selectedItems.append(selectedItem)
+    }
     
     // MARK: UICollectionViewDataSource
     

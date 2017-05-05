@@ -32,11 +32,24 @@ class MultiSelectHeaderDataSourceTests: QuickSpec {
             expect(subject?.selectedItems).to(contain(item1, item2))
         }
         
-//        it("should remove deselected item for selectedItems list") {
-//            subject.setupWithSelectedItems(selectedItems: items)
-//            subject.remove(item: item1)
-//            
-//        }
+        it("should remove deselected item for selectedItems list") {
+            subject.setupWithSelectedItems(selectedItems: items)
+            subject.remove(item: item1)
+            expect(subject?.selectedItems).to(contain(item2))
+            expect(subject?.selectedItems).toNot(contain(item1))
+        }
+        
+        it("should add selected item") {
+            subject.setupWithSelectedItems(selectedItems: [item1])
+            subject.selectItem(selectedItem: item2)
+            expect(subject?.selectedItems).to(contain(item2))
+        }
+        
+        it("should not add multiple of the same selected item") {
+            subject.setupWithSelectedItems(selectedItems: [item1])
+            subject.selectItem(selectedItem: item1)
+            expect(subject?.selectedItems.count).to(equal(1))
+        }
     }
 }
 
