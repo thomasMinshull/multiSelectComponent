@@ -18,6 +18,8 @@
 		55152F341EB14AF8008DC2EB /* MultiSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F301EB14AF8008DC2EB /* MultiSelectViewController.swift */; };
 		55152F351EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */; };
 		55152F361EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */; };
+		5520F9431EC0FC110019DA50 /* MultiSelectCollectionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5520F9421EC0FC110019DA50 /* MultiSelectCollectionViewControllerTests.swift */; };
+		5520F9451EC0FC380019DA50 /* MultiSelectCollectionDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5520F9441EC0FC380019DA50 /* MultiSelectCollectionDataSourceTests.swift */; };
 		552122781EC0E8640026861D /* MultiSelectSyncronizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */; };
 		5521227A1EC0E8D40026861D /* MultiSelectSyncronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */; };
 		5521227C1EC0F37F0026861D /* MultiSelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521227B1EC0F37F0026861D /* MultiSelectCollectionViewController.swift */; };
@@ -53,6 +55,8 @@
 		55152F301EB14AF8008DC2EB /* MultiSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectViewController.swift; sourceTree = "<group>"; };
 		55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectHeaderCollectionViewController.swift; sourceTree = "<group>"; };
+		5520F9421EC0FC110019DA50 /* MultiSelectCollectionViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionViewControllerTests.swift; sourceTree = "<group>"; };
+		5520F9441EC0FC380019DA50 /* MultiSelectCollectionDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionDataSourceTests.swift; sourceTree = "<group>"; };
 		552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectSyncronizerTests.swift; sourceTree = "<group>"; };
 		552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectSyncronizer.swift; sourceTree = "<group>"; };
 		5521227B1EC0F37F0026861D /* MultiSelectCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				55152F241EB14AC6008DC2EB /* MultiSelectHeaderCollectionViewControllerTests.swift */,
 				55007CA91EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift */,
 				552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */,
+				5520F9421EC0FC110019DA50 /* MultiSelectCollectionViewControllerTests.swift */,
+				5520F9441EC0FC380019DA50 /* MultiSelectCollectionDataSourceTests.swift */,
 				55152F261EB14AC6008DC2EB /* Info.plist */,
 			);
 			path = MultiSelectTestProjTests;
@@ -373,6 +379,8 @@
 			files = (
 				552122781EC0E8640026861D /* MultiSelectSyncronizerTests.swift in Sources */,
 				55007CAA1EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift in Sources */,
+				5520F9451EC0FC380019DA50 /* MultiSelectCollectionDataSourceTests.swift in Sources */,
+				5520F9431EC0FC110019DA50 /* MultiSelectCollectionViewControllerTests.swift in Sources */,
 				55152F251EB14AC6008DC2EB /* MultiSelectHeaderCollectionViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

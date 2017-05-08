@@ -23,14 +23,20 @@ struct  MultiSelectItem: MultiSelectItemProtocol, Equatable {
     }
 }
 
-protocol MultiSelectHeaderViewProctocol {
+protocol MultiSelectHeaderViewDelegate {
     func MultiSelectHeaderDidDeselectItem(multiSelectItem:MultiSelectItem)
 }
 
 class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     
     private let ds = MultiSelectHeaderDataSource()
-
+    
+    var delegate: MultiSelectHeaderViewDelegate?
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,10 +52,6 @@ class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     init() { // for testing
         let layout = UICollectionViewFlowLayout()
         super.init(collectionViewLayout: layout)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
     }
     
     var selectedItems: [MultiSelectItem]! {

@@ -8,15 +8,15 @@
 
 import UIKit
 
-struct MultiSelectSyncronizer: MultiSelectCollectionViewProtocol, MultiSelectHeaderViewProctocol {
+struct MultiSelectSyncronizer: MultiSelectCollectionViewDelegate, MultiSelectHeaderViewDelegate {
     
-    // MARK: MultiSelectHeaderViewProctocol
+    // MARK: MultiSelectHeaderViewDelegate
     
     func MultiSelectHeaderDidDeselectItem(multiSelectItem:MultiSelectItem) {
         
     }
     
-    // MARK: MultiSelectCollectionViewProtocol
+    // MARK: MultiSelectCollectionViewDelegate
     
     func MultiSelectCollectionDidSelectItem(item:MultiSelectItem) {
         

@@ -20,7 +20,6 @@ class MultiSelectHeaderCollectionViewControllerTests: QuickSpec {
         beforeEach {
             subject = MultiSelectHeaderCollectionViewController()
             items = [item1]
-            
         }
         
         it("should contain no selected items prior to set up") {
@@ -32,5 +31,14 @@ class MultiSelectHeaderCollectionViewControllerTests: QuickSpec {
             expect(subject?.selectedItems).to(contain(item1))
         }
         
+        it("should be able to set delegate") {
+            class multiSelectHeaderViewDelegate: NSObject, MultiSelectHeaderViewDelegate {
+                func MultiSelectHeaderDidDeselectItem(multiSelectItem:MultiSelectItem) {}
+            }
+            
+            let dup = multiSelectHeaderViewDelegate()
+            subject.delegate = dup
+            expect(subject?.delegate!).to(beIdenticalTo(dup))
+        }
     }
 }

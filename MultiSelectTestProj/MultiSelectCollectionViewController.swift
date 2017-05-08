@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MultiSelectCollectionViewProtocol {
+protocol MultiSelectCollectionViewDelegate {
     func MultiSelectCollectionDidSelectItem(item:MultiSelectItem)
     func MultiSelectCollectionDidDeselectItem(item:MultiSelectItem)
 }
@@ -16,6 +16,12 @@ protocol MultiSelectCollectionViewProtocol {
 private let reuseIdentifier = "Cell"
 
 class MultiSelectCollectionViewController: UICollectionViewController {
+    
+    var delegate:MultiSelectCollectionViewDelegate? 
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +35,14 @@ class MultiSelectCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - MultiSelectCollectionViewController public interface
+    
+    init() { // for testing
+        let layout = UICollectionViewFlowLayout()
+        super.init(collectionViewLayout: layout)
     }
 
+    
     /*
     // MARK: - Navigation
 

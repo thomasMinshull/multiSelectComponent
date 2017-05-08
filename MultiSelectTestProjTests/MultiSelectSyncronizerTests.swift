@@ -13,17 +13,19 @@ import Nimble
 
 class MultiSelectSyncronizerTests: QuickSpec {
     override func spec() {
-        var subject = MultiSelectSyncronizer()  
+        let subject = MultiSelectSyncronizer()
         
-        it("should conform to MultiSelectHeaderViewProctocol") {
-            expect(subject).to(beAKindOf(MultiSelectHeaderViewProctocol.self))
+        it("should conform to MultiSelectHeaderViewDelegate") {
+            expect(subject).to(beAKindOf(MultiSelectHeaderViewDelegate.self))
         }
         
-        it("should conform to MultiSelectCollectionViewProtocol") {
-            expect(subject).to(beAKindOf(MultiSelectCollectionViewProtocol.self))
+        it("should conform to MultiSelectCollectionViewDelegate") {
+            expect(subject).to(beAKindOf(MultiSelectCollectionViewDelegate.self))
         }
         
-        // test if we call did select item at index is message triggered? 
+        // TODO test if we call did select item at index is message triggered? 
+        
+        
     
     }
 }
