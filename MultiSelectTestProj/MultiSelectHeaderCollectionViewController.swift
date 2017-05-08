@@ -1,5 +1,5 @@
 //
-//  MultiSelectCollectionViewController.swift
+//  MultiSelectTableViewController.swift
 //  multiSelectionViewController
 //
 //  Created by ThomasMinshull on 2017-04-26.
@@ -29,7 +29,7 @@ protocol MultiSelectHeaderViewDelegate {
 
 class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     
-    private let ds = MultiSelectHeaderDataSource()
+    var ds: MultiSelectHeaderDataSource!
     
     var delegate: MultiSelectHeaderViewDelegate?
     
@@ -40,7 +40,7 @@ class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.collectionView!.dataSource = ds
+//        self.collectionView!.dataSource = ds
         
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ds.reuseIdentifier)
@@ -51,6 +51,7 @@ class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     
     init() { // for testing
         let layout = UICollectionViewFlowLayout()
+        ds = MultiSelectHeaderDataSource()
         super.init(collectionViewLayout: layout)
     }
     

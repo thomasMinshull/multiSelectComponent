@@ -1,5 +1,5 @@
 //
-//  MultiSelectCollectionDataSourceTests.swift
+//  MultiSelectTableViewDataSourceTests.swift
 //  MultiSelectTestProj
 //
 //  Created by ThomasMinshull on 2017-05-08.
@@ -11,8 +11,10 @@ import Foundation
 import Quick
 import Nimble
 
-class MultiSelectCollectionDataSourceTests: QuickSpec {
+class MultiSelectTableViewDataSourceTests: QuickSpec {
     override func spec() {
-        let subject = MultiSelectCollectionDataSource()
+        let subject = MultiSelectTableViewDataSource()
+        
+        
     }
 }

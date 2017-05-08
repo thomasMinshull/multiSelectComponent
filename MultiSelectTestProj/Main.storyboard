@@ -25,13 +25,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pys-8i-QkX">
                                 <rect key="frame" x="0.0" y="167" width="375" height="500"/>
                                 <connections>
-                                    <segue destination="lR8-eu-9zU" kind="embed" id="M3M-cP-OE0"/>
+                                    <segue destination="5KA-qr-0bO" kind="embed" identifier="" id="iVB-yR-ELw"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnV-OD-h6Y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                 <connections>
-                                    <segue destination="15z-n2-Hs2" kind="embed" id="ai9-K9-G1i"/>
+                                    <segue destination="15z-n2-Hs2" kind="embed" identifier="HeaderViewControllerSegue" id="ai9-K9-G1i"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -52,29 +52,11 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="H0Q-z0-1qv">
-            <objects>
-                <viewController id="lR8-eu-9zU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gGF-zu-5fK"/>
-                        <viewControllerLayoutGuide type="bottom" id="Meo-yZ-MZZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wWd-KN-pot">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WLm-4f-LD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1134" y="472"/>
-        </scene>
-        <!--Multi Select Collection View Controller-->
+        <!--Multi Select Header Collection View Controller-->
         <scene sceneID="f0C-dQ-wMZ">
             <objects>
-                <collectionViewController id="15z-n2-Hs2" customClass="MultiSelectCollectionViewController" customModule="MultiSelectTestProj" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" id="UrF-AM-G0p">
+                <collectionViewController id="15z-n2-Hs2" customClass="MultiSelectHeaderCollectionViewController" customModule="MultiSelectTestProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" id="UrF-AM-G0p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,6 +110,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5e-DS-3l5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133.5999999999999" y="-129.08545727136433"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Neo-BT-Md1">
+            <objects>
+                <tableViewController id="5KA-qr-0bO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4aA-DQ-nY3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IDo-yZ-mqx">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IDo-yZ-mqx" id="XGp-Q4-7zu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5KA-qr-0bO" id="RuM-li-0ya"/>
+                            <outlet property="delegate" destination="5KA-qr-0bO" id="QmN-05-cqV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgI-lS-ZXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="538"/>
         </scene>
     </scenes>
 </document>
