@@ -23,6 +23,10 @@ struct  MultiSelectItem: MultiSelectItemProtocol, Equatable {
     }
 }
 
+protocol MultiSelectHeaderViewProctocol {
+    func MultiSelectHeaderDidDeselectItem(multiSelectItem:MultiSelectItem)
+}
+
 class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     
     private let ds = MultiSelectHeaderDataSource()

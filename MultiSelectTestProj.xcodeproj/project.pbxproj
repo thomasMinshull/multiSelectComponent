@@ -18,6 +18,10 @@
 		55152F341EB14AF8008DC2EB /* MultiSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F301EB14AF8008DC2EB /* MultiSelectViewController.swift */; };
 		55152F351EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */; };
 		55152F361EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */; };
+		552122781EC0E8640026861D /* MultiSelectSyncronizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */; };
+		5521227A1EC0E8D40026861D /* MultiSelectSyncronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */; };
+		5521227C1EC0F37F0026861D /* MultiSelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521227B1EC0F37F0026861D /* MultiSelectCollectionViewController.swift */; };
+		5521227E1EC0F3A90026861D /* MultiSelectCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521227D1EC0F3A90026861D /* MultiSelectCollectionDataSource.swift */; };
 		C36628A38E2085E2D7236E85 /* Pods_MultiSelectTestProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2B129B2DA00755C4F257DA /* Pods_MultiSelectTestProj.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,10 @@
 		55152F301EB14AF8008DC2EB /* MultiSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectViewController.swift; sourceTree = "<group>"; };
 		55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectHeaderCollectionViewController.swift; sourceTree = "<group>"; };
+		552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectSyncronizerTests.swift; sourceTree = "<group>"; };
+		552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectSyncronizer.swift; sourceTree = "<group>"; };
+		5521227B1EC0F37F0026861D /* MultiSelectCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionViewController.swift; sourceTree = "<group>"; };
+		5521227D1EC0F3A90026861D /* MultiSelectCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionDataSource.swift; sourceTree = "<group>"; };
 		9C2B129B2DA00755C4F257DA /* Pods_MultiSelectTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiSelectTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD579C8F9AB3784FAFBC64BB /* Pods-MultiSelectTestProjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiSelectTestProjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultiSelectTestProjTests/Pods-MultiSelectTestProjTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D39BCCAC77A33A477CF9B348 /* Pods-MultiSelectTestProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiSelectTestProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultiSelectTestProj/Pods-MultiSelectTestProj.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +122,9 @@
 				55152F311EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift */,
 				55152F321EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift */,
 				55007CA51EB1648F00E9094A /* MultiSelectHeaderDataSource.swift */,
+				5521227B1EC0F37F0026861D /* MultiSelectCollectionViewController.swift */,
+				5521227D1EC0F3A90026861D /* MultiSelectCollectionDataSource.swift */,
+				552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */,
 				55152F161EB14AC6008DC2EB /* Assets.xcassets */,
 				55152F181EB14AC6008DC2EB /* LaunchScreen.storyboard */,
 				55152F1B1EB14AC6008DC2EB /* Info.plist */,
@@ -126,6 +137,7 @@
 			children = (
 				55152F241EB14AC6008DC2EB /* MultiSelectHeaderCollectionViewControllerTests.swift */,
 				55007CA91EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift */,
+				552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */,
 				55152F261EB14AC6008DC2EB /* Info.plist */,
 			);
 			path = MultiSelectTestProjTests;
@@ -345,9 +357,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55007CA61EB1648F00E9094A /* MultiSelectHeaderDataSource.swift in Sources */,
+				5521227C1EC0F37F0026861D /* MultiSelectCollectionViewController.swift in Sources */,
+				5521227E1EC0F3A90026861D /* MultiSelectCollectionDataSource.swift in Sources */,
 				55152F351EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift in Sources */,
 				55152F341EB14AF8008DC2EB /* MultiSelectViewController.swift in Sources */,
 				55152F361EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift in Sources */,
+				5521227A1EC0E8D40026861D /* MultiSelectSyncronizer.swift in Sources */,
 				55152F101EB14AC6008DC2EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552122781EC0E8640026861D /* MultiSelectSyncronizerTests.swift in Sources */,
 				55007CAA1EB27E0600E9094A /* MultiSelectHeaderDataSourceTests.swift in Sources */,
 				55152F251EB14AC6008DC2EB /* MultiSelectHeaderCollectionViewControllerTests.swift in Sources */,
 			);
