@@ -13,23 +13,23 @@ protocol MultiSelectTableViewDelegate {
     func MultiSelectCollectionDidDeselectItem(item:MultiSelectItem)
 }
 
-private let reuseIdentifier = "Cell"
+let MultiSelectTableViewReuseIdentifier = "MultiSelectTableViewReuseIdentifierCell"
 
 class MultiSelectTableViewController: UITableViewController {
     
     var delegate:MultiSelectTableViewDelegate?
     var ds:MultiSelectTableViewDataSource!
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Register cell classes
-        self.tableView!.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        self.tableView!.register(UITableViewCell.self, forCellReuseIdentifier: MultiSelectTableViewReuseIdentifier)
+        self.tableView.dataSource = ds
     }
-
-
- 
-    // MARK: UITableViewDelegate 
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.tableView.reloadData()
+//    }
 }

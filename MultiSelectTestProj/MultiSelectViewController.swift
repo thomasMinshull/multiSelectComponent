@@ -42,19 +42,16 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == headerViewControllerSegue {
-            let vc = segue.destination as! MultiSelectHeaderCollectionViewController
+            let collectionVC = segue.destination as! MultiSelectHeaderCollectionViewController
             let headerDataSource = MultiSelectHeaderDataSource()
             headerDataSource.setupWithSelectedItems(selectedItems: selectedItems) // TODO change this to be the same as bellow 
-            vc.ds = headerDataSource // TODO check that this is loading properly
+            collectionVC.ds = headerDataSource // TODO check that this is loading properly
         } else if segue.identifier == mainViewControllerSegue {
-            let vc = segue.destination as! MultiSelectTableViewController
+            let tableVC = segue.destination as! MultiSelectTableViewController
             let multiSelectDataSource = MultiSelectTableViewDataSource()
-            multiSelectDataSource.selectedItems = selectedItems
-            vc.ds = multiSelectDataSource
+            multiSelectDataSource.selectedItems = selectedItems // TODO this should be a copy of this array not a pointer to the array
+            tableVC.ds = multiSelectDataSource
         }
     }
-    
-    
-    
 
 }

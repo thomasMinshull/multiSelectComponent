@@ -9,9 +9,9 @@
 import UIKit
 
 class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
-
-    let reuseIdentifier = "Cell"
+    
     private (set) var selectedItems = [MultiSelectItem]()
+    let reuseIdentifier = MultiSelectCollectionViewCellIdentifier
     
     // MARK: MultiSelectHeaderDataSource Public Interface 
     
@@ -32,20 +32,17 @@ class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
     
     // MARK: UICollectionViewDataSource
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return selectedItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MultiSelectCollectionViewCell
         
-        // Configure the cell
+        let item = selectedItems[indexPath.row]
+        
+        cell.textLabel.text = item.multiSelectText
+        cell.detailTextLabel.text = item.multiSelectDetailText
         
         return cell
     }

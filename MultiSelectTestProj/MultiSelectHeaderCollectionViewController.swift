@@ -39,12 +39,7 @@ class MultiSelectHeaderCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.collectionView!.dataSource = ds
-        
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ds.reuseIdentifier)
-
+        self.collectionView!.dataSource = ds
     }
     
     //MARK: MultiSelectHeaderCollectionViewController Public Interface
