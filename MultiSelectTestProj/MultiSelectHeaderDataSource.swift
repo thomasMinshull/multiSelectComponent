@@ -25,10 +25,29 @@ class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
         }
     }
     
-    func selectItem(selectedItem: MultiSelectItem) {
-        guard !(selectedItems.contains(selectedItem)) else { return }
+    func add(selectedItem: MultiSelectItem, completion:(Bool)->()) { 
+        guard !(selectedItems.contains(selectedItem)) else { return completion(false)}
         selectedItems.append(selectedItem)
+        completion(true)
     }
+    
+    func indexPathFor(item: MultiSelectItem) -> IndexPath? {
+        guard selectedItems.contains(item) else {
+            return nil
+        }
+        
+        var int = 0
+        
+        for selectedItem in selectedItems {
+            if selectedItem == item {
+                break
+            }
+            int = int + 1
+        }
+        
+        return IndexPath(row: int, section: 0)
+    }
+    
     
     // MARK: UICollectionViewDataSource
     

@@ -58,7 +58,7 @@ class MultiSelectHeaderCollectionViewController: UICollectionViewController {
         ds.setupWithSelectedItems(selectedItems: selectedItems)
         collectionView?.reloadData() 
     }
-
+    
     // MARK: UICollectionViewDelegate
 
     /*

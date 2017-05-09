@@ -21,7 +21,6 @@
 		5520F9431EC0FC110019DA50 /* MultiSelectTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5520F9421EC0FC110019DA50 /* MultiSelectTableViewControllerTests.swift */; };
 		5520F9451EC0FC380019DA50 /* MultiSelectTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5520F9441EC0FC380019DA50 /* MultiSelectTableViewDataSourceTests.swift */; };
 		552122781EC0E8640026861D /* MultiSelectSyncronizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */; };
-		5521227A1EC0E8D40026861D /* MultiSelectSyncronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */; };
 		5521227C1EC0F37F0026861D /* MultiSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521227B1EC0F37F0026861D /* MultiSelectTableViewController.swift */; };
 		5521227E1EC0F3A90026861D /* MultiSelectTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521227D1EC0F3A90026861D /* MultiSelectTableViewDataSource.swift */; };
 		C36628A38E2085E2D7236E85 /* Pods_MultiSelectTestProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2B129B2DA00755C4F257DA /* Pods_MultiSelectTestProj.framework */; };
@@ -58,7 +57,6 @@
 		5520F9421EC0FC110019DA50 /* MultiSelectTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectTableViewControllerTests.swift; sourceTree = "<group>"; };
 		5520F9441EC0FC380019DA50 /* MultiSelectTableViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		552122771EC0E8640026861D /* MultiSelectSyncronizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectSyncronizerTests.swift; sourceTree = "<group>"; };
-		552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectSyncronizer.swift; sourceTree = "<group>"; };
 		5521227B1EC0F37F0026861D /* MultiSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectTableViewController.swift; sourceTree = "<group>"; };
 		5521227D1EC0F3A90026861D /* MultiSelectTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectTableViewDataSource.swift; sourceTree = "<group>"; };
 		9C2B129B2DA00755C4F257DA /* Pods_MultiSelectTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiSelectTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +126,6 @@
 				55007CA51EB1648F00E9094A /* MultiSelectHeaderDataSource.swift */,
 				5521227B1EC0F37F0026861D /* MultiSelectTableViewController.swift */,
 				5521227D1EC0F3A90026861D /* MultiSelectTableViewDataSource.swift */,
-				552122791EC0E8D40026861D /* MultiSelectSyncronizer.swift */,
 				55152F161EB14AC6008DC2EB /* Assets.xcassets */,
 				55152F181EB14AC6008DC2EB /* LaunchScreen.storyboard */,
 				55152F1B1EB14AC6008DC2EB /* Info.plist */,
@@ -368,7 +365,6 @@
 				55152F351EB14AF8008DC2EB /* MultiSelectCollectionViewCell.swift in Sources */,
 				55152F341EB14AF8008DC2EB /* MultiSelectViewController.swift in Sources */,
 				55152F361EB14AF8008DC2EB /* MultiSelectHeaderCollectionViewController.swift in Sources */,
-				5521227A1EC0E8D40026861D /* MultiSelectSyncronizer.swift in Sources */,
 				55152F101EB14AC6008DC2EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

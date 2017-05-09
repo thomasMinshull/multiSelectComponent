@@ -12,6 +12,9 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
     
     private let headerViewControllerSegue = "HeaderViewControllerSegue"
     private let mainViewControllerSegue = "MainViewControllerSegue"
+    
+    var headerViewContoller: MultiSelectHeaderCollectionViewController?
+    var multiSelectTableViewContoller: MultiSelectTableViewController?
 
     let selectedItems = [MultiSelectItem(multiSelectText:"First Item", multiSelectDetailText:"detail Text"), MultiSelectItem(multiSelectText:"Second Item", multiSelectDetailText:"detail Text"), MultiSelectItem(multiSelectText:"Third Item", multiSelectDetailText:"detail Text")]
     
@@ -30,11 +33,21 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
     }
     
     // MARK: MultiSelectHeaderViewDelegate
-    func MultiSelectCollectionDidSelectItem(item:MultiSelectItem) {
+    func MultiSelectTableViewDidSelectItem(item:MultiSelectItem) {
+        guard let hvc =  headerViewContoller else {
+            return
+        }
+        
+        hvc.ds.add(selectedItem: item) { success in
+            if let ip = hvc.ds.indexPathFor(item: item), success {
+                hvc.collectionView?.insertItems(at: [ip])
+                hvc.collectionView?.reloadData()
+            }
+        }
         
     }
     
-    func MultiSelectCollectionDidDeselectItem(item:MultiSelectItem) {
+    func MultiSelectTableViewDidDeselectItem(item:MultiSelectItem) {
         
     }
     
@@ -43,11 +56,14 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == headerViewControllerSegue {
             let collectionVC = segue.destination as! MultiSelectHeaderCollectionViewController
+            headerViewContoller = collectionVC
             let headerDataSource = MultiSelectHeaderDataSource()
-            headerDataSource.setupWithSelectedItems(selectedItems: selectedItems) // TODO change this to be the same as bellow 
+            headerDataSource.setupWithSelectedItems(selectedItems: []) // TODO change this to be the same as bellow
             collectionVC.ds = headerDataSource // TODO check that this is loading properly
         } else if segue.identifier == mainViewControllerSegue {
             let tableVC = segue.destination as! MultiSelectTableViewController
+            tableVC.delegate = self
+            multiSelectTableViewContoller = tableVC
             let multiSelectDataSource = MultiSelectTableViewDataSource()
             multiSelectDataSource.selectedItems = selectedItems // TODO this should be a copy of this array not a pointer to the array
             tableVC.ds = multiSelectDataSource

@@ -9,8 +9,8 @@
 import UIKit
 
 protocol MultiSelectTableViewDelegate {
-    func MultiSelectCollectionDidSelectItem(item:MultiSelectItem)
-    func MultiSelectCollectionDidDeselectItem(item:MultiSelectItem)
+    func MultiSelectTableViewDidSelectItem(item:MultiSelectItem)
+    func MultiSelectTableViewDidDeselectItem(item:MultiSelectItem)
 }
 
 let MultiSelectTableViewReuseIdentifier = "MultiSelectTableViewReuseIdentifierCell"
@@ -24,12 +24,20 @@ class MultiSelectTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Register cell classes
-        self.tableView!.register(UITableViewCell.self, forCellReuseIdentifier: MultiSelectTableViewReuseIdentifier)
-        self.tableView.dataSource = ds
+        tableView!.register(UITableViewCell.self, forCellReuseIdentifier: MultiSelectTableViewReuseIdentifier)
+        tableView.dataSource = ds
+        
+    }
+
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = ds.objectAt(indexPath: indexPath) {
+            delegate?.MultiSelectTableViewDidSelectItem(item: item)
+        }
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        self.tableView.reloadData()
-//    }
+    override public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+    }
+    
+
 }

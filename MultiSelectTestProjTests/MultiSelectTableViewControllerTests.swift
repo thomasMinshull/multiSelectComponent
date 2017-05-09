@@ -17,8 +17,8 @@ class MultiSelectTableViewControllerTests: QuickSpec {
         
         it("should be able to set delegate") {
             class multiSelectTableViewDelegate: MultiSelectTableViewDelegate {
-                func MultiSelectCollectionDidSelectItem(item:MultiSelectItem) {}
-                func MultiSelectCollectionDidDeselectItem(item:MultiSelectItem) {}
+                func MultiSelectTableViewDidSelectItem(item:MultiSelectItem) {}
+                func MultiSelectTableViewDidDeselectItem(item:MultiSelectItem) {}
             }
             
             let dup = multiSelectTableViewDelegate()
