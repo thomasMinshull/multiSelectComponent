@@ -63,6 +63,7 @@ class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
         cell.textLabel.text = item.multiSelectText
         cell.detailTextLabel.text = item.multiSelectDetailText
         
+        
         return cell
     }
     

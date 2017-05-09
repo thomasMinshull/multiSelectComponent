@@ -30,14 +30,17 @@ class MultiSelectTableViewController: UITableViewController {
     }
 
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = ds.objectAt(indexPath: indexPath) {
-            delegate?.MultiSelectTableViewDidSelectItem(item: item)
+        guard let cell = tableView.cellForRow(at: indexPath), let item = ds.objectAt(indexPath: indexPath) else {
+            return
         }
-    }
-    
-    override public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        cell.accessoryType = cell.accessoryType == .checkmark ? .none : .checkmark
+        
+        if cell.accessoryType == .checkmark {
+            delegate?.MultiSelectTableViewDidSelectItem(item: item)
+        } else {
+            delegate?.MultiSelectTableViewDidDeselectItem(item: item)
+        }
         
     }
-    
-
 }

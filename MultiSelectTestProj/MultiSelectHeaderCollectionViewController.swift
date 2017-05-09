@@ -11,12 +11,13 @@ import UIKit
 protocol MultiSelectItemProtocol {
     var multiSelectText: String { get }
     var multiSelectDetailText: String { get }
-
+    //var selected: Bool { get set }
  }
 
 struct  MultiSelectItem: MultiSelectItemProtocol, Equatable {
     var multiSelectText: String
     var multiSelectDetailText: String
+    // var selected = false
     
     static func ==(lhs: MultiSelectItem, rhs: MultiSelectItem) -> Bool {
         return lhs.multiSelectText == rhs.multiSelectText && lhs.multiSelectDetailText == rhs.multiSelectDetailText
