@@ -83,6 +83,9 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="v7g-E5-fEC"/>
                                             </constraints>
                                             <state key="normal" title="X"/>
+                                            <connections>
+                                                <action selector="deSelectButtonTapped:forEvent:" destination="fsI-F8-rHe" eventType="touchUpInside" id="b30-63-b0z"/>
+                                            </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7nq-uE-vnB">
                                             <rect key="frame" x="58" y="8" width="134" height="84"/>

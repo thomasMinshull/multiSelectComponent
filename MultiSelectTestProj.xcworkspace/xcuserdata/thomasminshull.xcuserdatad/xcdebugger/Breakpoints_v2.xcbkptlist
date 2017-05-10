@@ -74,7 +74,7 @@
                   moduleName = "MultiSelectTestProj"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/thomasminshull/Dev/DrBill/MultiSelectTestProj/MultiSelectTestProj/MultiSelectViewController.swift"
-                  timestampString = "516070850.2832"
+                  timestampString = "516142203.982765"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -89,7 +89,7 @@
                   moduleName = "MultiSelectTestProj"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/thomasminshull/Dev/DrBill/MultiSelectTestProj/MultiSelectTestProj/MultiSelectViewController.swift"
-                  timestampString = "516070850.286228"
+                  timestampString = "516142203.985581"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -97,22 +97,6 @@
                   offsetFromSymbolStart = "189">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MultiSelectTestProj/MultiSelectHeaderCollectionViewController.swift"
-            timestampString = "516070779.947701"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
