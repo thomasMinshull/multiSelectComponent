@@ -66,9 +66,10 @@ class MultiSelectTableViewDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MultiSelectTableViewReuseIdentifier, for: indexPath)
-        cell.textLabel?.text = items[indexPath.row].multiSelectText
-        cell.detailTextLabel?.text = items[indexPath.row].multiSelectDetailText
-        // to do handle cell.accessory type based on if selected or not
+        let item = items[indexPath.row]
+        cell.textLabel?.text = item.multiSelectText
+        cell.detailTextLabel?.text = item.multiSelectDetailText
+        cell.accessoryType = item.selected ? .checkmark : .none
         return cell
     }
     

@@ -29,11 +29,13 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
     
     // MARK: MultiSelectHeaderViewDelegate
     func MultiSelectHeaderDidDeselectItem(multiSelectItem:MultiSelectItem) {
-        guard let mstvc = multiSelectTableViewContoller else {
+        guard let mstvc = multiSelectTableViewContoller, let ip = mstvc.ds.indexPath(of: multiSelectItem) else {
             return
         }
         
-//        mstvc.tableView.dataSource.inde
+        mstvc.ds.deSelectItem(at: ip)
+        mstvc.tableView.reloadRows(at: [ip], with: .none)
+
     }
     
     // MARK: MultiSelectHeaderViewDelegate
@@ -62,6 +64,7 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == headerViewControllerSegue {
             let collectionVC = segue.destination as! MultiSelectHeaderCollectionViewController
+            collectionVC.delegate = self
             headerViewContoller = collectionVC
             let headerDataSource = MultiSelectHeaderDataSource()
             headerDataSource.setupWithSelectedItems(selectedItems: []) // TODO change this to be the same as bellow
