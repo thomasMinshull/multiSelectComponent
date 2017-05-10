@@ -37,8 +37,10 @@ class MultiSelectTableViewController: UITableViewController {
         cell.accessoryType = cell.accessoryType == .checkmark ? .none : .checkmark
         
         if cell.accessoryType == .checkmark {
+            ds.selectItem(at: indexPath)
             delegate?.MultiSelectTableViewDidSelectItem(item: item)
         } else {
+            ds.deSelectItem(at:indexPath)
             delegate?.MultiSelectTableViewDidDeselectItem(item: item)
         }
         

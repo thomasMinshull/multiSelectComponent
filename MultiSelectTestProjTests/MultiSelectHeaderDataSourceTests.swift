@@ -85,6 +85,33 @@ class MultiSelectHeaderDataSourceTests: QuickSpec {
             let ip = IndexPath(row: 0, section: 0)
             expect(subject?.indexPathFor(item: item1)).to(equal(ip))
         }
+        
+        // MARK: remove
+        
+        it("should remove item given valid indexPath") {
+            subject.setupWithSelectedItems(selectedItems: items)
+            let ip = IndexPath(row: 0, section: 0)
+            subject?.removeItem(at: ip)
+            expect(subject?.selectedItems.count).to(equal(1))
+            expect(subject?.selectedItems).to(contain(item2))
+            expect(subject?.selectedItems).toNot(contain(item1))
+        }
+        
+        it("should not remove items given indexPath with invalid row") {
+            subject.setupWithSelectedItems(selectedItems: items)
+            let ip = IndexPath(row: 2, section: 0)
+            subject?.removeItem(at: ip)
+            expect(subject?.selectedItems.count).to(equal(2))
+            expect(subject?.selectedItems).to(contain(items))
+        }
+
+        it("should not remove items given indexPath with invalid section") {
+            subject.setupWithSelectedItems(selectedItems: items)
+            let ip = IndexPath(row: 0, section: 2)
+            subject?.removeItem(at: ip)
+            expect(subject?.selectedItems.count).to(equal(2))
+            expect(subject?.selectedItems).to(contain(items))
+        }
     }
 }
 

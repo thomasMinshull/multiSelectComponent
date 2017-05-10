@@ -21,7 +21,7 @@ class MultiSelectTableViewDataSourceTests: QuickSpec {
             item1 = MultiSelectItem(multiSelectText: "Item1", multiSelectDetailText: "This is a dup for testing")
             item2 = MultiSelectItem(multiSelectText: "Item2", multiSelectDetailText: "This is a dup for testing")
             
-            subject.selectedItems = [item1, item2]
+            subject.items = [item1, item2]
         }
 
         it("should return nil for given invalid indexPath section ") {

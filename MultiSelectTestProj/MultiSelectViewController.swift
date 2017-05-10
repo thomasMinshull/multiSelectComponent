@@ -29,7 +29,11 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
     
     // MARK: MultiSelectHeaderViewDelegate
     func MultiSelectHeaderDidDeselectItem(multiSelectItem:MultiSelectItem) {
+        guard let mstvc = multiSelectTableViewContoller else {
+            return
+        }
         
+//        mstvc.tableView.dataSource.inde
     }
     
     // MARK: MultiSelectHeaderViewDelegate
@@ -41,14 +45,16 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
         hvc.ds.add(selectedItem: item) { success in
             if let ip = hvc.ds.indexPathFor(item: item), success {
                 hvc.collectionView?.insertItems(at: [ip])
-                hvc.collectionView?.reloadData()
             }
         }
         
     }
     
     func MultiSelectTableViewDidDeselectItem(item:MultiSelectItem) {
-        
+        guard let hvc = headerViewContoller else {
+            return
+        }
+        hvc.removeItem(item: item)
     }
     
     // MARK: - Navigation
@@ -65,7 +71,7 @@ class MultiSelectViewController: UIViewController, MultiSelectHeaderViewDelegate
             tableVC.delegate = self
             multiSelectTableViewContoller = tableVC
             let multiSelectDataSource = MultiSelectTableViewDataSource()
-            multiSelectDataSource.selectedItems = selectedItems // TODO this should be a copy of this array not a pointer to the array
+            multiSelectDataSource.items = selectedItems // TODO this should be a copy of this array not a pointer to the array
             tableVC.ds = multiSelectDataSource
         }
     }

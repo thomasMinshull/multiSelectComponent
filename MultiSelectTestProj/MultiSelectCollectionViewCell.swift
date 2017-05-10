@@ -13,8 +13,8 @@ let MultiSelectCollectionViewCellIdentifier = "MultiSelectCollectionViewCell"
 class MultiSelectCollectionViewCell: UICollectionViewCell {
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var detailTextLabel: UILabel!
-  
-    @IBAction func deSelectButtonTapped(_ sender: Any) {
-        
-    }
+    @IBOutlet var deSelectButton: UIButton!
+    
 }
+
+

@@ -25,6 +25,13 @@ class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
         }
     }
     
+    func removeItem(at indexPath: IndexPath) -> MultiSelectItem? {
+        guard indexPath.section == 0 && indexPath.row < selectedItems.count else {
+            return nil
+        }
+        return selectedItems.remove(at: indexPath.row)
+    }
+    
     func add(selectedItem: MultiSelectItem, completion:(Bool)->()) { 
         guard !(selectedItems.contains(selectedItem)) else { return completion(false)}
         selectedItems.append(selectedItem)
@@ -62,7 +69,6 @@ class MultiSelectHeaderDataSource: NSObject, UICollectionViewDataSource {
         
         cell.textLabel.text = item.multiSelectText
         cell.detailTextLabel.text = item.multiSelectDetailText
-        
         
         return cell
     }

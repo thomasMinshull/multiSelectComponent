@@ -10,27 +10,67 @@ import UIKit
 
 class MultiSelectTableViewDataSource: NSObject, UITableViewDataSource {
     
-    var selectedItems:[MultiSelectItem]!
+    var selectedItems: [MultiSelectItem]! {
+        return items.filter { (item) -> Bool in return item.selected }
+    }
+    
+    var items:[MultiSelectItem]!
+    
+    func selectItem(at indexPath: IndexPath) {
+        guard valid(indexPath: indexPath), var item = objectAt(indexPath: indexPath) else {
+            return
+        }
+        item.selected = true
+    }
+    
+    func deSelectItem(at indexPath: IndexPath) {
+        guard valid(indexPath: indexPath), var item = objectAt(indexPath: indexPath), selectedItems.contains(item) else {
+            return
+        }
+        item.selected = false
+    }
     
     func objectAt(indexPath: IndexPath) -> MultiSelectItem? { 
-        guard !(indexPath.section > 0) && (indexPath.row < selectedItems.count) else {
+        guard valid(indexPath: indexPath) else {
             return nil
         }
-        return selectedItems[indexPath.row]
+        return items[indexPath.row]
+    }
+    
+    func indexPath(of item:MultiSelectItem) -> IndexPath? {
+        guard items.contains(item) else {
+            return nil
+        }
+        var row = 0
+        for localItem in items {
+            if localItem == item {
+                break
+            }
+            row = row + 1
+        }
+        return IndexPath(row: row, section: 0)
+    }
+    
+    private func valid(indexPath: IndexPath) -> Bool {
+        guard !(indexPath.section > 0) && (indexPath.row < items.count) else {
+            return false
+        }
+        return true
     }
     
     // MARK: TableViewDataSource Methods
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedItems.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MultiSelectTableViewReuseIdentifier, for: indexPath)
-        cell.textLabel?.text = selectedItems[indexPath.row].multiSelectText
-        cell.detailTextLabel?.text = selectedItems[indexPath.row].multiSelectDetailText
+        cell.textLabel?.text = items[indexPath.row].multiSelectText
+        cell.detailTextLabel?.text = items[indexPath.row].multiSelectDetailText
         // to do handle cell.accessory type based on if selected or not
         return cell
     }
+    
     
 }

@@ -83,9 +83,6 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="v7g-E5-fEC"/>
                                             </constraints>
                                             <state key="normal" title="X"/>
-                                            <connections>
-                                                <action selector="deSelectButtonTapped:" destination="fsI-F8-rHe" eventType="touchUpInside" id="dwE-gw-4d0"/>
-                                            </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7nq-uE-vnB">
                                             <rect key="frame" x="58" y="8" width="134" height="84"/>
@@ -125,6 +122,7 @@
                                     <constraint firstItem="7nq-uE-vnB" firstAttribute="leading" secondItem="gcj-ub-KQh" secondAttribute="trailing" constant="8" id="qaW-7M-KfL"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="deSelectButton" destination="gcj-ub-KQh" id="7zT-Jp-3TX"/>
                                     <outlet property="detailTextLabel" destination="pZk-le-Hsi" id="l3x-rh-RC0"/>
                                     <outlet property="textLabel" destination="Kvz-M5-wrT" id="meR-Pp-XXN"/>
                                 </connections>

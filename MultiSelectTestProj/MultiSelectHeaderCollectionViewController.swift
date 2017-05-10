@@ -11,13 +11,19 @@ import UIKit
 protocol MultiSelectItemProtocol {
     var multiSelectText: String { get }
     var multiSelectDetailText: String { get }
-    //var selected: Bool { get set }
+    var selected: Bool { get set }
  }
 
 struct  MultiSelectItem: MultiSelectItemProtocol, Equatable {
     var multiSelectText: String
     var multiSelectDetailText: String
-    // var selected = false
+    var selected: Bool
+    
+    init(multiSelectText: String, multiSelectDetailText: String, selected: Bool = false) {
+        self.multiSelectText = multiSelectText
+        self.multiSelectDetailText = multiSelectDetailText
+        self.selected = selected
+    }
     
     static func ==(lhs: MultiSelectItem, rhs: MultiSelectItem) -> Bool {
         return lhs.multiSelectText == rhs.multiSelectText && lhs.multiSelectDetailText == rhs.multiSelectDetailText
@@ -60,35 +66,23 @@ class MultiSelectHeaderCollectionViewController: UICollectionViewController {
         collectionView?.reloadData() 
     }
     
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    func removeItem(item: MultiSelectItem) { 
+        guard let ip = ds.indexPathFor(item: item) else {
+            return
+        }
+        
+        ds.remove(item: item)
+        collectionView?.deleteItems(at: [ip])
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = ds.removeItem(at: indexPath) else {
+            return
+        }
+        collectionView.deleteItems(at: [indexPath])
+        delegate?.MultiSelectHeaderDidDeselectItem(multiSelectItem:item)
     }
-    */
 
 }
